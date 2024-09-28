@@ -16,6 +16,7 @@ public class ManajemenHotel {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         HotelManager hotelManager = new HotelManager();
+        
         // Menambahkan beberapa hotel secara default dengan nama jalan
         hotelManager.tambahHotel(new Hotel("Hotel Grand Surya", "Jalan Pahlawan", 180, 500000));
         hotelManager.tambahHotel(new Hotel("Hotel Mercure", "Jalan Sejahtera", 220, 600000));
