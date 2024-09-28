@@ -1,4 +1,5 @@
-# PBO_Manajemen-Pengelollaan-Hotel-Samarinda
+# POSTTEST 1 PBO
+# Manajemen-Pengelollaan-Hotel-Samarinda
 ## Nama   : Nyoman Arini Trirahayu
 ## NIM    : 2309116002
 ## Kelas  : A1 Sistem Informasi 2023
@@ -6,7 +7,10 @@
 ### Source Code
 ### Packages com.mycompany Class ManajemenHotel.java
 package com.mycompany.manajemenhotel;
-
+/**
+ *
+ * @author nyoma
+ */
 import manajemen.HotelManager;
 import hotel.Hotel;
 import java.util.Scanner;
@@ -16,54 +20,28 @@ public class ManajemenHotel {
         Scanner scanner = new Scanner(System.in);
         HotelManager hotelManager = new HotelManager();
 
-        // Menambahkan beberapa hotel secara default
-        hotelManager.tambahHotel(new Hotel("Hotel Grand Surya", "Samarinda", 180, 500000));
-        hotelManager.tambahHotel(new Hotel("Hotel Mercure Samarinda", "Samarinda", 220, 600000));
-        hotelManager.tambahHotel(new Hotel("Hotel Aston Samarinda", "Samarinda", 200, 550000));
-        hotelManager.tambahHotel(new Hotel("Hotel Ibis Samarinda", "Samarinda", 150, 450000));
-        hotelManager.tambahHotel(new Hotel("Hotel Fave Samarinda", "Samarinda", 130, 400000));
-        hotelManager.tambahHotel(new Hotel("Hotel Royal Samarinda", "Samarinda", 160, 470000));
-        hotelManager.tambahHotel(new Hotel("Hotel Horison Samarinda", "Samarinda", 170, 490000));
-        hotelManager.tambahHotel(new Hotel("Hotel Atria Samarinda", "Samarinda", 140, 460000));
-        hotelManager.tambahHotel(new Hotel("Hotel Santika Samarinda", "Samarinda", 190, 520000));
+        // Menambahkan beberapa hotel secara default dengan nama jalan
+        hotelManager.tambahHotel(new Hotel("Hotel Grand Surya", "Jalan Pahlawan", 180, 500000));
+        hotelManager.tambahHotel(new Hotel("Hotel Mercure", "Jalan Sejahtera", 220, 600000));
+        hotelManager.tambahHotel(new Hotel("Hotel Aston", "Jalan Damai", 200, 550000));
+        hotelManager.tambahHotel(new Hotel("Hotel Ibis", "Jalan Kebangkitan", 150, 450000));
+        hotelManager.tambahHotel(new Hotel("Hotel Fave", "Jalan Cinta", 130, 400000));
+        hotelManager.tambahHotel(new Hotel("Hotel Royal", "Jalan Maju", 160, 470000));
+        hotelManager.tambahHotel(new Hotel("Hotel Horison", "Jalan Harapan", 170, 490000));
+        hotelManager.tambahHotel(new Hotel("Hotel Atria", "Jalan Bahagia", 140, 460000));
+        hotelManager.tambahHotel(new Hotel("Hotel Santika", "Jalan Sukses", 190, 520000));
 
-        // Sistem Login Admin
-        String username = "admin";
-        String password = "admin123"; // Anda bisa mengubah ini sesuai kebutuhan
-
-        boolean loginBerhasil = false;
-        while (!loginBerhasil) {
-            System.out.print("Masukkan username: ");
-            String inputUsername = scanner.nextLine();
-            System.out.print("Masukkan password: ");
-            String inputPassword = scanner.nextLine();
-
-            if (inputUsername.equals(username) && inputPassword.equals(password)) {
-                loginBerhasil = true;
-                System.out.println("Login berhasil! Selamat datang, Admin.");
-            } else {
-                System.out.println("Login gagal! Username atau password salah. Coba lagi.");
-                System.out.print("Apakah Anda ingin keluar? (ya/tidak): ");
-                String pilihanKeluar = scanner.nextLine();
-                if (pilihanKeluar.equalsIgnoreCase("ya")) {
-                    System.out.println("Keluar dari sistem.");
-                    scanner.close();
-                    return; // Keluar dari program
-                }
-            }
-        }
-
-        // Menu Admin setelah login berhasil
+        // Menu Admin
         boolean keluar = false;
         while (!keluar) {
             // Menu untuk admin
-            System.out.println("\n=== Menu Admin ===");
+            System.out.println("\n======== Menu  ========");
             System.out.println("1. Tambah Hotel");
             System.out.println("2. Tampilkan Semua Hotel");
             System.out.println("3. Hapus Hotel");
-            System.out.println("4. Tampilkan Total Hotel");
+            System.out.println("4. Update Hotel");
             System.out.println("5. Keluar");
-            System.out.print("Pilih opsi: ");
+            System.out.print("Pilih opsi admin: ");
             int pilihan = scanner.nextInt();
             scanner.nextLine(); // Mengatasi masalah nextInt()
 
@@ -82,23 +60,45 @@ public class ManajemenHotel {
 
                     Hotel hotel = new Hotel(nama, lokasi, jumlahKamar, harga);
                     hotelManager.tambahHotel(hotel);
+                    // Menampilkan pesan sukses
+                    System.out.println("" + nama + " berhasil ditambahkan.");
                     break;
 
                 case 2:
-                    // Tampilkan semua hotel
+                    // Tampilkan semua hotel dalam format tabel
+                    System.out.printf("%-5s %-30s %-20s %-15s %-10s\n", "ID", "Nama Hotel", "Lokasi", "Jumlah Kamar", "Harga");
+                    System.out.println("----------------------------------------------------------------------------------------");
                     hotelManager.tampilkanSemuaHotel();
+                    System.out.println("----------------------------------------------------------------------------------------");
+                    // Tampilkan total hotel
+                    System.out.println("TOTAL HOTEL SAAT INI: " + hotelManager.getTotalHotel());
                     break;
 
                 case 3:
                     // Hapus hotel
-                    System.out.print("Masukkan nama hotel yang akan dihapus: ");
-                    String namaHapus = scanner.nextLine();
-                    hotelManager.hapusHotel(namaHapus);
+                    System.out.print("Masukkan ID hotel yang akan dihapus: ");
+                    int idHapus = scanner.nextInt();
+                    hotelManager.hapusHotel(idHapus);
+                    System.out.println("Hotel dengan ID " + idHapus + " berhasil dihapus.");
                     break;
 
                 case 4:
-                    // Tampilkan total hotel
-                    System.out.println("Total hotel saat ini: " + hotelManager.getTotalHotel());
+                    // Update hotel
+                    System.out.print("Masukkan ID hotel yang akan diupdate: ");
+                    int idUpdate = scanner.nextInt();
+                    scanner.nextLine(); // Mengatasi masalah nextInt()
+                    System.out.print("Masukkan nama hotel baru: ");
+                    String namaUpdate = scanner.nextLine();
+                    System.out.print("Masukkan lokasi hotel baru: ");
+                    String lokasiUpdate = scanner.nextLine();
+                    System.out.print("Masukkan jumlah kamar baru: ");
+                    int jumlahKamarUpdate = scanner.nextInt();
+                    System.out.print("Masukkan harga baru: ");
+                    double hargaUpdate = scanner.nextDouble();
+                    scanner.nextLine(); // Mengatasi masalah nextDouble()
+
+                    hotelManager.updateHotel(idUpdate, namaUpdate, lokasiUpdate, jumlahKamarUpdate, hargaUpdate);
+                    System.out.println("Hotel dengan ID " + idUpdate + " berhasil diupdate.");
                     break;
 
                 case 5:
@@ -114,6 +114,7 @@ public class ManajemenHotel {
         scanner.close();
     }
 }
+
 
 
 ### Pakages hotel Class Hotel.java
