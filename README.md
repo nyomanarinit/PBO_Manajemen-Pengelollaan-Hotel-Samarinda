@@ -11,6 +11,7 @@ package com.mycompany.manajemenhotel;
 import manajemen.HotelManager;
 import hotel.Hotel;
 import java.util.Scanner;
+
 public class ManajemenHotel {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
