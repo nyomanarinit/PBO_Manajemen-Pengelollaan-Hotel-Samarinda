@@ -389,7 +389,7 @@ Class ReservationManagement.java berfungsi untuk mengelola reservasi kamar. Bebe
 11.  Menu Manajemen Reservasi Ubah Reservasi
 
 
-![Cuplikan layar 2024-09-29 115930](https://github.com/user-attachments/assets/a86d4526-e74f-44f1-8921-6d74d5740d51)
+     [Cuplikan layar 2024-09-29 115930](https://github.com/user-attachments/assets/a86d4526-e74f-44f1-8921-6d74d5740d51)
 
 
 
