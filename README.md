@@ -388,15 +388,15 @@ Class ReservationManagement.java berfungsi untuk mengelola reservasi kamar. Bebe
 
 11.  Menu Manajemen Reservasi Ubah Reservasi
 
-    ![Cuplikan layar 2024-09-29 114144](https://github.com/user-attachments/assets/93c0269c-35e6-4f55-9bb2-81614d4e6eae)
+    ![Cuplikan layar 2024-09-29 114144](https://github.com/user-attachments/assets/b78a557e-8f1d-4286-9781-c857ae8b2b88)
 
-    
-    ![Cuplikan layar 2024-09-29 114152](https://github.com/user-attachments/assets/cfbd4c05-0d49-4483-85e8-b32ae05b2c89)
+
+    ![Cuplikan layar 2024-09-29 114152](https://github.com/user-attachments/assets/46d53b88-bcdb-4153-8792-0b2d36ed5696)
 
    
     
 
-12. Menu Manajemen Reservasi Hapus Reservasi
+13. Menu Manajemen Reservasi Hapus Reservasi
 
     ![Cuplikan layar 2024-09-29 114124](https://github.com/user-attachments/assets/e645f734-c7ee-4d28-86bc-1c7593c0d93d)
 
@@ -404,12 +404,12 @@ Class ReservationManagement.java berfungsi untuk mengelola reservasi kamar. Bebe
     ![Cuplikan layar 2024-09-29 114130](https://github.com/user-attachments/assets/49753150-5ddb-4d77-9c89-cbc71e8751e4)
 
 
-13. Menu Manajemen Reservasi Kembali Kemenu Utama
+14. Menu Manajemen Reservasi Kembali Kemenu Utama
 
     ![Cuplikan layar 2024-09-29 114206](https://github.com/user-attachments/assets/b7d9e112-ded5-443f-a11f-f0d9a6a64564)
 
 
-14. Tampilan AKhir Program
+15. Tampilan AKhir Program
 
     ![Cuplikan layar 2024-09-29 114216](https://github.com/user-attachments/assets/e04107e5-4a7f-41ba-be4b-d94175a9033f)
 
