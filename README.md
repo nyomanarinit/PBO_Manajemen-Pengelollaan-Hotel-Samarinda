@@ -1,5 +1,5 @@
 # POSTTEST 1 PBO
-# Manajemen-Pengelollaan-Hotel-Samarinda
+# Manajemen-Pengelolaan-Hotel
 ## Nama   : Nyoman Arini Trirahayu
 ## NIM    : 2309116002
 ## Kelas  : A1 Sistem Informasi 2023
@@ -8,7 +8,7 @@
 ### Latar Belakang Pogram
 ### Latar Belakang Program Manajemen Pengelolaan Hotel
 
-Berikut adalah latar belakang yang menjelaskan secara singkat mengenai program manajemen hotel yang telah kita buat:
+Berikut adalah latar belakang yang menjelaskan secara singkat mengenai program manajemen hotel:
 
 ---
 
